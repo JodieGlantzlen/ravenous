@@ -1,10 +1,10 @@
-const apiKey = 'qgCvyzhURsagarvubb01SqCN_3XYbZutpe2vgqWP98FVY0_0vcH93O4_DVCEUOQppCGzMxxX5_v7SQfVXsCYAQ55Il0rDZwjyesDz-Irptqk291ZiMfZN4LVbY0rX3Yx';
+import apikey from '../credentials/apikey';
 
 const yelp = {
     search(term, location, sortBy) {
         return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
             headers: {
-                Authorization: `Bearer ${apiKey}`
+                Authorization: `Bearer ${apikey}`
             },
         }).then(response => {
             console.log(response.json);
